@@ -1,15 +1,15 @@
 {
  "entityType": "workflow",
  "data": {
-  "testedAt": "2025-11-21T09:44:31.402Z",
+  "testedAt": "2025-11-21T10:44:45.774Z",
   "publishedAt": "0001-01-01T00:00:00Z",
   "createdAt": "2025-11-21T09:43:40.11Z",
-  "updatedAt": "2025-11-21T09:51:29.013366Z",
+  "updatedAt": "2025-11-21T10:44:45.774757Z",
   "isDeleted": false,
   "entityId": "bae875af-2171-44ea-96c8-17b9be5f3583",
   "name": "Test223",
   "commitId": "commit-1e98f3b7-ef01-45e8-8136-2bd4edd533a5",
-  "status": "draft",
+  "status": "tested",
   "lastVersion": "",
   "isLive": false,
   "commitInfo": {
@@ -25,7 +25,7 @@
   "nodes": [
    {
     "position": {
-     "x": 341.046875,
+     "x": 493.046875,
      "y": 0
     },
     "sourcePosition": "bottom",
@@ -44,12 +44,12 @@
       "name": "Atul"
      },
      "settings": {
-      "cacheEnabled": false,
-      "durationUnit": "d",
-      "durationValue": 0,
       "authType": "private",
       "cacheKeys": "",
-      "isEnabled": true
+      "isEnabled": true,
+      "cacheEnabled": false,
+      "durationUnit": "d",
+      "durationValue": 0
      },
      "nodeType": "apiTrigger",
      "name": "Trigger",
@@ -62,8 +62,8 @@
    },
    {
     "position": {
-     "y": 130,
-     "x": 341.046875
+     "x": 493.046875,
+     "y": 130
     },
     "sourcePosition": "bottom",
     "targetPosition": "top",
@@ -79,7 +79,7 @@
    },
    {
     "position": {
-     "x": 341.046875,
+     "x": 493.046875,
      "y": 410
     },
     "sourcePosition": "bottom",
@@ -88,15 +88,6 @@
     "type": "restApiNode",
     "data": {
      "input": {
-      "contentType": {
-       "value": ""
-      },
-      "queryParams": {
-       "value": []
-      },
-      "authentication": {
-       "value": "None"
-      },
       "path": {
        "value": "/posts/2"
       },
@@ -108,41 +99,50 @@
       },
       "headers": {
        "value": []
+      },
+      "contentType": {
+       "value": ""
+      },
+      "queryParams": {
+       "value": []
+      },
+      "authentication": {
+       "value": "None"
       }
      },
      "executedValue": {
       "error": "",
       "output": {
        "Body": {
-        "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-        "title": "qui est esse",
         "userId": 1,
-        "id": 2
+        "id": 2,
+        "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+        "title": "qui est esse"
        },
        "Headers": {
-        "X-Powered-By": "Express",
-        "X-Ratelimit-Limit": "1000",
-        "Access-Control-Allow-Credentials": "true",
         "Etag": "W/\"116-jnDuMpjju89+9j7e0BqkdFsVRjs\"",
-        "Vary": "Origin, Accept-Encoding",
         "Report-To": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=ijXmVsN65rEhsa%2BEYvlskPgF824ZDRqh5y79i07TQP4%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1763697459\"}],\"max_age\":3600}",
-        "Content-Type": "application/json; charset=utf-8",
-        "Cf-Cache-Status": "HIT",
-        "Reporting-Endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=ijXmVsN65rEhsa%2BEYvlskPgF824ZDRqh5y79i07TQP4%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1763697459\"",
-        "X-Content-Type-Options": "nosniff",
-        "Age": "20812",
-        "Nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
-        "Date": "Fri, 21 Nov 2025 09:44:31 GMT",
         "Cache-Control": "max-age=43200",
         "Server-Timing": "cfCacheStatus;desc=\"HIT\",cfEdge;dur=2,cfOrigin;dur=0",
+        "Cf-Cache-Status": "HIT",
         "X-Ratelimit-Remaining": "946",
+        "X-Content-Type-Options": "nosniff",
+        "Nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+        "X-Ratelimit-Limit": "1000",
         "Via": "2.0 heroku-router",
         "Cf-Ray": "9a1f3fbbfe2e8171-DEL",
-        "Alt-Svc": "h3=\":443\"; ma=86400",
-        "Expires": "-1",
-        "X-Ratelimit-Reset": "1763697506",
         "Pragma": "no-cache",
-        "Server": "cloudflare"
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "Access-Control-Allow-Credentials": "true",
+        "Date": "Fri, 21 Nov 2025 09:44:31 GMT",
+        "Vary": "Origin, Accept-Encoding",
+        "Server": "cloudflare",
+        "Expires": "-1",
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Powered-By": "Express",
+        "X-Ratelimit-Reset": "1763697506",
+        "Reporting-Endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=ijXmVsN65rEhsa%2BEYvlskPgF824ZDRqh5y79i07TQP4%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1763697459\"",
+        "Age": "20812"
        },
        "StatusCode": 200
       }
@@ -170,8 +170,8 @@
    },
    {
     "position": {
-     "y": 540,
-     "x": 341.046875
+     "x": 493.046875,
+     "y": 540
     },
     "sourcePosition": "bottom",
     "targetPosition": "top",
@@ -187,7 +187,7 @@
    },
    {
     "position": {
-     "x": 341.046875,
+     "x": 493.046875,
      "y": 615
     },
     "sourcePosition": "bottom",
@@ -210,9 +210,9 @@
       }
      },
      "settings": {
-      "timeout": 10,
       "timeoutAsync": 20,
-      "errorContinue": false
+      "errorContinue": false,
+      "timeout": 10
      },
      "nodeType": "responseNode",
      "entity": "responseNode",
@@ -228,7 +228,7 @@
    },
    {
     "position": {
-     "x": 341.046875,
+     "x": 493.046875,
      "y": 745
     },
     "sourcePosition": "bottom",
@@ -245,8 +245,8 @@
    },
    {
     "position": {
-     "y": 205,
-     "x": 341.046875
+     "x": 493.046875,
+     "y": 205
     },
     "sourcePosition": "bottom",
     "targetPosition": "top",
@@ -255,35 +255,247 @@
     "data": {
      "input": {
       "query": {
-       "value": ""
+       "value": "db.comments.find({})"
       },
       "action": {
        "value": 0
       }
      },
+     "executedValue": {
+      "error": "",
+      "output": [
+       {
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd7da6",
+        "_id": "5a9427648b0beebeb6957b51",
+        "Bool": false,
+        "date": "2025-11-01T05:49:56Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "else": "NegativeReview",
+          "then": "PositiveReview",
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          }
+         }
+        },
+        "email": "john.doe@example.com"
+       },
+       {
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "john_bishop@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd446f",
+        "_id": "5a9427648b0beebeb69579f5",
+        "Bool": false,
+        "date": "1975-01-21T00:31:22Z"
+       },
+       {
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "else": "NegativeReview",
+          "then": "PositiveReview",
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          }
+         }
+        },
+        "email": "hafthór_júlíus_björnsson@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd5b9a",
+        "_id": "5a9427648b0beebeb6957a4b",
+        "Bool": false,
+        "date": "2015-02-08T01:28:23Z"
+       },
+       {
+        "email": "yolanda_owen@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd6d40",
+        "_id": "5a9427648b0beebeb6957aa3",
+        "Bool": false,
+        "date": "1980-07-13T06:41:13Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        }
+       },
+       {
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd587d",
+        "_id": "5a9427648b0beebeb6957a38",
+        "Bool": false,
+        "date": "2012-11-26T11:00:57Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "gemma_whelan@gameofthron.es"
+       },
+       {
+        "Bool": false,
+        "date": "1982-07-06T15:10:41Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "owen_teale@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd7c9e",
+        "_id": "5a9427648b0beebeb6957b44"
+       },
+       {
+        "_id": "5a9427648b0beebeb6957ba7",
+        "date": "2011-08-11T22:12:38Z",
+        "name": "Rodrik Cassel",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "ron_donachie@gameofthron.es",
+        "movie_id": "573a1391f29313caabcd8543"
+       },
+       {
+        "_id": "5a9427648b0beebeb6957bb6",
+        "date": "1985-02-24T20:04:25Z",
+        "name": "Ellaria Sand",
+        "text": {
+         "$cond": {
+          "else": "NegativeReview",
+          "then": "PositiveReview",
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          }
+         }
+        },
+        "email": "indira_varma@gameofthron.es",
+        "movie_id": "573a1391f29313caabcd8780"
+       },
+       {
+        "movie_id": "573a1391f29313caabcd7850",
+        "_id": "5a9427648b0beebeb6957b1a",
+        "Bool": false,
+        "date": "2001-02-09T20:18:49Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "roxanne_mckee@gameofthron.es",
+        "Integer": "100"
+       },
+       {
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd4eaf",
+        "_id": "5a9427648b0beebeb6957a22",
+        "Bool": false,
+        "date": "1970-11-15T05:54:02Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "taylor_scott@fakegmail.com"
+       }
+      ]
+     },
      "settings": {
+      "timeoutAsync": 20,
+      "durationValue": 5,
+      "errorContinue": false,
       "timeout": 10,
       "rowLimit": 1000,
       "cacheEnabled": false,
-      "durationUnit": "m",
-      "timeoutAsync": 20,
-      "durationValue": 5,
-      "errorContinue": false
+      "durationUnit": "m"
      },
      "nodeType": "dbNode",
      "entity": "connector",
      "entityId": "15641d38-9862-4483-849b-0c85fbf64fc5",
+     "status": "success",
      "name": "mongodb",
      "runInLoop": {
       
      },
      "blockName": "mongodb",
-     "testedAt": "0001-01-01T00:00:00Z"
+     "testedAt": "2025-11-21T10:44:45.774Z"
     }
    },
    {
     "position": {
-     "x": 341.046875,
+     "x": 493.046875,
      "y": 335
     },
     "sourcePosition": "bottom",
@@ -367,8 +579,8 @@
    },
    {
     "style": {
-     "stroke": "gray",
-     "strokeWidth": 1
+     "strokeWidth": 1,
+     "stroke": "gray"
     },
     "id": "e_y4xjlj",
     "source": "n_tiXizI",
@@ -411,7 +623,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-21T09:51:29.024537Z",
-   "updatedAt": "2025-11-21T09:51:29.024537Z"
+   "updatedAt": "2025-11-21T10:44:44.757719Z"
   },
   {
    "entityCommitId": "commit-1e98f3b7-ef01-45e8-8136-2bd4edd533a5",
@@ -424,7 +636,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-21T09:44:28.406461Z",
-   "updatedAt": "2025-11-21T09:51:29.022745Z"
+   "updatedAt": "2025-11-21T10:44:44.756297Z"
   }
  ]
 }
